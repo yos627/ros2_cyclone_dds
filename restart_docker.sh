@@ -2,7 +2,7 @@
 
 # --- Configuration ---
 # The name of the specific service (container) you want to restart
-SERVICE_NAME="build_image"
+SERVICE_NAME="run_container"
 # ---------------------
 
 echo "Removing any dangling docker container. . . "
