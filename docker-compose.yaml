@@ -1,6 +1,6 @@
 services:
 
-  build_image:
+  run_container:
     container_name: ros2_cyclone_dds
     image: ros2_cyclone_dds:test
     network_mode: host
