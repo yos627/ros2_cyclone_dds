@@ -2,9 +2,7 @@
 
 # --- Configuration ---
 # The directory containing the docker-compose.yaml and Dockerfile
-DOCKER_DIR="/home/ysc/Docker"
-# The name of the specific service (container) you want to restart
-SERVICE_NAME="build_image"
+DOCKER_DIR="${HOME}/ros2_cyclone_dds"
 # ---------------------
 
 echo "🚀 Starting Docker rebuild and restart process..."
@@ -27,11 +25,6 @@ docker build -t ros2_cyclone_dds:test .
 #    echo "---"
 #    exit 1
 #fi
-
-# 3. Verify the container status
-#echo "✅ Image rebuild and container update complete."
-#echo "📋 Verifying container status for $SERVICE_NAME..."
-#docker compose ps "$SERVICE_NAME"
 
 echo "---"
 echo "🎉 Build finished successfully!"
