@@ -4,7 +4,7 @@
 # The directory containing the docker-compose.yaml and Dockerfile
 DOCKER_DIR="/home/ysc/Docker"
 # The name of the specific service (container) you want to restart
-SERVICE_NAME="camera_publisher_test"
+SERVICE_NAME="build_image"
 # ---------------------
 
 echo "🚀 Starting Docker rebuild and restart process..."
@@ -18,7 +18,7 @@ echo "➡️ Changing directory to: $DOCKER_DIR"
 # --no-cache: forces a complete rebuild (optional, but good for ensuring fresh start)
 # --build: tells docker-compose to rebuild the image before starting/creating the container
 echo "🏗️ Rebuilding the Docker image for service: $SERVICE_NAME"
-docker build -t camera_publisher_test:test .
+docker build -t ros2_cyclone_dds:test .
 
 # Note: Since the Dockerfile is in the same directory as the docker-compose.yaml,
 # docker-compose will find it automatically based on the 'build' context in the YAML.
