@@ -1,0 +1,22 @@
+services:
+
+  build_image:
+    container_name: ros2_cyclone_dds
+    image: ros2_cyclone_dds:test
+    network_mode: host
+    ipc: host
+    stdin_open: true
+    tty: true
+#    restart: unless-stopped
+    env_file:
+      - ./runtime.env
+    environment:
+      - RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+      - CYCLONEDDS_URI=/home/certis/cyclonedds.xml
+    privileged: true
+    volumes:
+      - /dev/video0:/dev/video0
+      - ${HOME}/cyclonedds.xml:/home/certis/cyclonedds.xml
+    #command: ros2 run camera_publisher camera_publisher_node
+
+

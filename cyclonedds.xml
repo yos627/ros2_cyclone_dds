@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CycloneDDS xmlns="www.eclipse.org" xmlns:xsi="www.w3.org" xsi:schemaLocation="www.eclipse.org www.eclipse.org/schemas/cyclonedds.xsd">
+    <Domain id="2"> <!-- Ensure this ROS DOMAIN ID matches across devices (default is 0) -->
+        <Discovery>
+            <ParticipantIndex>auto</ParticipantIndex>
+            <Peers>
+                <!-- Add the IP address of the other machine(s) here -->
+                <Peer Address="192.168.1.107"/> 
+            </Peers>
+        </Discovery>
+        <General>
+            <!-- Add IP address of this machine -->
+            <Interfaces>
+                <NetworkInterface address="192.168.1.105" presence_required="true"/>
+            </Interfaces>
+        </General>
+    </Domain>
+</CycloneDDS>
